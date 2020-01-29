@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+     <head>
+
+        <meta charset="UTF-8" />
+
+        <title>love~love~</title>
+         <script language="JavaScript">
+            function startTime()   
+            {   
+                var today=new Date();//定义日期对象   
+                var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年    
+                var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回月    
+                var dd = today.getDate();//通过日期对象的getDate()方法返回日     
+                var hh=today.getHours();//通过日期对象的getHours方法返回小时   
+                var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟   
+                var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒   
+                // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09   
+                MM=checkTime(MM);
+                dd=checkTime(dd);
+                mm=checkTime(mm);   
+                ss=checkTime(ss);    
+                var day; //用于保存星期（getDay()方法得到星期编号）
+                if(today.getDay()==0)   day   =   "星期日 " 
+                if(today.getDay()==1)   day   =   "星期一 " 
+                if(today.getDay()==2)   day   =   "星期二 " 
+                if(today.getDay()==3)   day   =   "星期三 " 
+                if(today.getDay()==4)   day   =   "星期四 " 
+                if(today.getDay()==5)   day   =   "星期五 " 
+                if(today.getDay()==6)   day   =   "星期六 " 
+                document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss+"   " + day;   
+
+                 document.getElementById('flowDateTimeSpan').innerHTML=yyyy*365+MM*30+dd-(2019*365+3*30+19)+"天";
+
+                        
+                setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法 
+            }   
+                 
+                function checkTime(i)   
+            {   
+                if (i<10){
+                    i="0" + i;
+                }   
+                  return i;
+            }  
+
+
+             
+           
+        </script>
+
+
+
+    </head>
+
+
+
+<body onload="startTime()">
+
+<h1 align="center"> 老婆，我爱你！(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤ </h1>
+
+    <br>
+<h3>相识于：<font color="black">2019-03-19</font></h3>
+<h3>现在是：<font color="red"><span id="nowDateTimeSpan"></span></font></h3>
+<h3>过去了：<font color="blue"><span id="flowDateTimeSpan"></span></font></h3>
+<h3>永远爱您哦~</h3>
+     <br>
+
+
+ <table width="200">
+
+              <tr>
+
+                 <td>日期</td>
+
+                <td>状态</td>
+
+              </tr>
+
+             <tr>
+
+                <td>2020-01-29</td>
+
+                <td>已更新</td>
+
+             </tr>
+
+             <tr>
+
+                <td>2020-01-30</td>
+
+                <td>未更新</td>
+
+             </tr>
+              <tr>
+
+                <td>2020-01-31</td>
+
+                <td>未更新</td>
+
+             </tr>
+
+
+
+        </table>
+
+
+
+
+<h2 align="center">2020年1月29日，天气晴</h2>
+
+
+
+<h3>明天早上就出发呀，希望能顺利到达叭，今天我们这公交已经停运了我打电话找了个黑车，嘻嘻嘻。<br>
+
+        徒手写html哦，等见到你了我教你怎么在这儿写东西叭~♥</h3>
+
+         
+
+</body>
+
+
+
+</html>
